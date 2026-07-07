@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{ 
+        background-color: red;   
+        border: 1px solid black; 
+        width: 100px;
+        height: 100px;
+        padding: 0px 30px;  /* 상하 좌우 */
+        margin: 10px 20px 30px 8%; /*상 우 하 좌*/
+                               
+        }
+
+
+        .box2{ 
+            box-sizing: border-box;
+            border: 2px solid rgb(27, 8, 139);
+            border-radius: 50%;
+           width: 100px;
+            background-color: rgb(33, 173, 131);
+            box-shadow: 8px 8px 8px 8px rgb(58, 73, 124);
+            text-align: center;
+            height: 100px;
+            line-height: 40px;
+            color: white;
+        }
+        
+        .circle{
+                border-radius: 500px;            
+        }
+
+
+        .banner{
+                background-color: orange;
+                display: flex;
+                justify-content: center;
+
+        }
+
+
+        .boxitem{
+                width: 300px;
+                height: 200px;
+                background-color: white;
+                border: 1px solid yellow;
+                /* display: inline-block; */
+                border-radius: 15px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box"> </div>
+    <div class="box2">박스2</div>
+    <img class="circle" src="/html/img/tangerines.jpg" alt="웅">
+
+
+
+    <div class="banner">베너
+        <div class="boxitem">1</div>
+        <div class="boxitem">2</div>
+        <div class="boxitem">3</div>
+        <div class="boxitem">4</div>
+
+
+
+    </div>
+
+
+
+    
+</body>
+</html>

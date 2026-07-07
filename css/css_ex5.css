@@ -1,0 +1,51 @@
+
+.notlce box{
+            border: 1px solid #ddd;
+}
+
+
+*{margin auto
+
+}
+.tittle{   
+     
+        background: black;
+        color: white;
+        font-weight: bold;
+        padding:12px;
+        width: auto;
+        
+        
+
+}
+
+h2{
+    color: red;
+    text-align:center
+}
+
+h3{text-align:center
+}
+
+p{text-align:center
+}
+
+.blue{ 
+    color:blue
+}
+
+#small{font-size: small;
+}
+
+
+#content{
+        width: 640px;
+        margin:0 auto;
+
+}
+
+
+.box{
+    border:1px solid #7a7e6a;
+    padding: 10px;
+}

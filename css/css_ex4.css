@@ -1,0 +1,23 @@
+
+
+div[class="blue"]{ background-color: aqua;
+    
+   
+
+}
+h1{ /*background-color: blue;
+    color: rgb(243, 238, 238);
+    display: inline-block;*/
+
+}
+.title{
+        background-color: blue;
+        color: white;
+        display: inline;
+
+
+}
+.accent{ 
+        color: red;
+        font-weight: 700;
+}
