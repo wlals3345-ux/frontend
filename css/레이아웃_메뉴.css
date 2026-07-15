@@ -1,0 +1,161 @@
+ *{
+    box-sizing: border-box;
+ }
+ ul{
+    list-style: none;
+    padding: 0px;
+ }
+ a{
+    text-decoration: none;
+    color: 100;
+ }
+ 
+ 
+ 
+ 
+.badge{
+        /*position 속성
+        static (기본값-위치값 지정 안됨)
+        relative - 부모상자, 위치값
+        absolute - 부모를 기준으로 배치(부모가 없다면 body를 기준)
+        fixed - 고정배치
+        */
+
+        position: relative; /*기준이 되는 상자*/
+        border: none;
+        padding: 10px 15px;
+        font-weight: 500;
+        }
+
+.badge_img{
+    background-color: aquamarine;
+    border-radius: 50%;
+    padding: 5px;
+    color: deepskyblue;
+    position: absolute; /*기준이 되는 상자로부터 위치를 잡음*/
+       /* right, left, bottom, 음수로 주면 부모 바깥으로 나갈 수 있음 */
+    
+    }
+
+.fixedbox{
+    position: fixed; /*위치 고정*/
+    padding: 10px 20px;
+    border-radius: 50%;
+    color: peru;
+    top: 10px;
+    right: 10px;
+    background-color: blanchedalmond;
+    z-index: 999; /* 가장 앞으로 보이게 하기 */
+    
+    }
+
+
+
+
+/* .menu li:first-of-type{
+    padding-left:0px;
+} */
+
+
+
+ 
+
+    /*화면에서 요소를 제거하는 방법*/
+    /* visibility: hidden;  */
+    /* display: none; */
+
+    /*화면에서 요소를 보이게 하는 방법*
+    /* display: block;
+    visibility: visible; */
+   
+     
+
+ /*
+ 메뉴 만들기
+ */
+ 
+ .menu{
+    display: flex;
+
+ }
+ .menu_item{
+    position: relative;
+    padding: 0px 10px;
+    /* height과 line-heihjt을 동일하게 주면 세로 가운데 정렬할 수 있 */
+    height: 40px;
+    line-height: 40px; 
+    
+    background-color: powderblue;
+ }
+ .submenu{
+    position: absolute;
+    top: 40x;
+    left: 0px;
+    width: 100px;
+    /* background-color: bisque; */
+    padding-left: 10px;
+    display: none;
+    
+ }
+/* 요소를 여러개 선택해서 스타일을 적용
+ :hover : 요소에 마우스가 올라온 상태
+        공백
+        > */
+ .menu_item:hover > .submenu, .menu_item:hover{
+    background-color: thistle;
+    display: block;
+
+ }
+
+.carousel{
+    position: relative;
+    width:100%;
+    height: 150px;
+    /* overflow: hidden; */
+}
+.carousel img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.carousel button{
+    position: absolute;
+    border: none;
+    opacity: 0.6;
+    height: 100%;
+    font-weight: 700;
+    color: black;
+   
+}
+.carousel button:first-of-type{
+    top: 0px;
+    left: 0px;
+}
+.carousel button:last-of-type{
+    top: 0px;
+    right: 0px;
+}
+
+
+.carousel p{
+    position: absolute;
+    width:100%;
+    text-align: center;
+    
+    
+
+    
+  
+}
+
+.carousel p:first-of-type{
+    
+    bottom: 15px;
+    
+    
+}
+
+
+.carousel p:last-of-type{
+    bottom: -10px;
+}

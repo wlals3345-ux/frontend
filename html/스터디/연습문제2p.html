@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .wrap{
+      /*지민님 코드*/
+      /*
+      width: 1200px;
+      /* display: flex;
+      justify-content: center;
+      align-items: center; 
+      margin-left: auto;
+      margin-right: auto;
+      */
+      /*New code*/
+      max-width: 1200px;/* 이건 최대 넓이를 정해주는 코드입니다.*/
+      width: 100%;
+      display: flex;
+      flex-direction: column;/*큰 영역도 나눠야겠줘?*/
+      margin: 0 auto;/*가운데 정렬*/
+
+    } 
+
+    .header{
+      /* border: 1px solid black; */
+      display: flex;
+      flex-direction: column;
+    
+    }
+    .header-top{
+       border: 1px solid black;
+       display: flex;
+       width: 100%;
+       height: 150px;
+       margin-bottom: 10px;
+    }
+    #header-top1{
+      width: 20%;
+      border: 1px solid black;  
+    }
+    #header-top2{
+      width: 60%;
+      border: 1px solid black;
+    }
+    #header-top3{
+      width: 20%;
+      border: 1px solid black;
+    }
+
+    .nav{
+      /*
+      border: 1px solid black;*/
+      /*New code*/
+      border: 1px solid black;
+      margin-top: 10px;
+      height: 40px;
+    }
+    #menu{
+      /*
+      display: flex;
+      justify-content: center;
+      gap: 14%;  
+      */
+      /*New code*/
+      margin: 0; /* menu 영역안에 가운데 정렬를 했다라고생각해주시면됩니다*/
+      padding: 0; /* menu 영역안에 가운데 정렬를 했다라고생각해주시면됩니다*/
+      line-height: 40px; /* menu 영역안에 가운데 정렬를 했다라고생각해주시면됩니다*/
+      display: flex;
+      justify-content: space-evenly;  
+    }
+    .content{
+      border: 1px solid black;
+      height: 500px;
+      margin-top: 10px;
+      display: flex;
+      /* margin-bottom: 10px; */
+      
+    }
+    #content1{
+      border: 1px solid black;
+      width: 30%;
+    }
+
+     #content2{
+      border: 1px solid black;
+      width: 40%;
+    }
+
+     #content3{
+      border: 1px solid black;
+      width: 30%;
+    }
+    .footer{
+      border: 1px solid black;
+      height: 100px;
+      margin-top: 10px;
+
+    }
+    #footer1{
+      border: 1px solid black;
+      height: 70%;
+    }
+
+     #footer2{
+      height: 30%;
+    }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+
+
+    <header class="header">
+     <div>
+      <div class="header-top">
+        <div id="header-top1"></div>
+        <div id="header-top2"></div>
+        <div id="header-top3"></div>
+      </div>
+
+      <nav class="nav">
+        <ul id="menu">
+          <li>Java</li>
+          <li>Oracle</li>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+        </ul>
+      </nav>
+     </div>
+    </header>
+    <section class="content">
+     <div>
+      <div id="content1"></div>
+      <div id="content2"></div>
+      <div id="content3"></div>
+    </section>
+    <footer class="footer">
+      <div id="footer1"></div>
+      <div id="footer2"></div>
+     </div>
+    </footer>
+  </div>
+
+
+    
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+<!-- 하단 스타일 태그를 채워 문제를 풀어주시면 됩니다.-->
+  <style>
+    .wrap{
+      width: 1200px;
+      /* display: flex;
+      justify-content: center;
+      align-items: center; */
+      margin-left: auto;
+      margin-right: auto;
+    } 
+
+    .header{
+      /* border: 1px solid black; */
+      display: flex;
+      flex-direction: column;
+    
+    }
+    .header-top{
+       border: 1px solid black;
+       display: flex;
+       width: 100%;
+       height: 40px;
+       line-height: 40px;
+       margin-bottom: 10px;
+       position: relative;
+      }
+
+    #home{
+      position: static;
+      margin-left: 80px;
+    }
+    #login{
+      position: relative;
+      left: 940px;
+    }
+    #join{
+      position: relative; 
+      left: 940px;
+    }
+    #cs{
+      position: relative; 
+      left: 940px;
+    }
+    ul{
+      list-style: none;
+    }
+    .nav{
+      border: 1px solid black;
+      padding:0px;
+      
+    }
+    #menu{
+      display: flex;
+      justify-content: space-evenly;
+    }
+    .menu_item{
+      position: relative;
+      height: 15px;
+    }
+    .submenu{
+      display: none;
+      padding: 0;
+
+    }
+    .menu_item:hover .submenu{
+      background-color: black;
+      color: white;
+      display: block;
+    }
+  
+    .content{
+      border: 1px solid black;
+      height: 500px;
+      margin-top: 10px;
+      display: flex;
+      margin-bottom: 10px;
+     
+    }
+    #content1{
+      border: 1px solid black;
+      width: 30%;
+    }
+
+     #content2{
+      border: 1px solid black;
+      width: 40%;
+    }
+    #img{
+      width:100%;
+      height: 100%;
+    }
+     #content3{
+      border: 1px solid black;
+      width: 30%;
+    }
+    table{
+      border: 1px solid black;
+      border-collapse: collapse;
+      width: 100%;
+     
+      
+    }
+    tr{
+      border: 1px solid black;
+    
+      
+
+    }
+    th{
+      border: 1px solid black;
+      background-color: antiquewhite;
+      padding: 5px;
+      font-size: 0.9rem;
+    }
+    td{
+      border: 1px solid black;
+      text-align: center;
+      padding: 10px;
+      font-size: 0.9rem;
+    }
+    /* .footer{
+      border: 1px solid black;
+      height: 100px;
+      margin-top: 10px;
+
+    }
+    #footer1{
+      border: 1px solid black;
+      height: 70%;
+    }
+
+     #footer2{
+      height: 30%;
+    } */
+    
+  </style>
+</head>
+
+<body>
+  
+  <div class="wrap">
+
+
+    <header class="header">
+
+      <div class="header-top">
+        <a id="home" href="">홈</a>
+        <a id="login" href="">로그인</a>
+        <a id="join" href="">회원가입</a>
+        <a id="cs" href="">고객센터</a>
+      </div>
+
+      <nav class="nav">
+        <ul id="menu">
+          <li class="menu_item">Java
+            <ul class="submenu">
+              <li>java1</li>
+              <li>java2</li>
+              <li>java3</li>
+              <li>java4</li>
+            </ul>
+            </li>
+          <li>Oracle</li>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+        </ul>
+      </nav>
+    </header>
+    
+    <section class="content">
+      <div id="content1"></div>
+      <div id="content2"><img id="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6Bo_XZYejCxgbDF4PErmOMweEvGjpmoeVmfhZSskFtA&s=10" alt=""></div>
+      <div id="content3"></div></div> 
+    </section>
+
+    <footer>
+    <table>
+      <thead>
+        <tr>
+          <th id="ct1">번호</th>
+          <th id="ct2">제목</th>
+          <th id="ct3">내용</th>
+          <th id="ct4">글쓴이</th>
+          <th id="ct5"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>숙제1</td><td>숙제를 합시다.</td><td>이숙제</td><td><a href="/html/스터디/상세보기.html">상세보기</a></td></tr>
+          <td>2</td><td>숙제2</td><td>숙제를 합시다.</td><td>김숙제</td><td><input type="button" value="상세보기"></td></tr>
+          <td>3</td><td>숙제3</td><td>숙제를 합시다.</td><td>박숙제</td><td><input type="button" value="상세보기"></td></tr>
+          <td>4</td><td>숙제4</td><td>숙제를 합시다.</td><td>심숙제</td><td><input type="button" value="상세보기"></td></tr>
+      </tbody>
+    </table>
+    </footer>
+  </div>
+
+</body>
+
+</html>

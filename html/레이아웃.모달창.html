@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="/css/basic.css"> -->
+    <style>
+        /* 구글 폰트 https://fonts.google.com/selection/embed */
+      @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Gowun+Batang&family=Jua&display=swap');
+      /* 
+      변수 선언
+      --변수명 = 값;
+      */
+      :root{
+        --white: #fff;
+      }  
+      .modal-backdrop{
+            /* 부모창 */
+            display: flex;
+            /* 주축에(가로row) 대한 정렬 */
+            justify-content: center;
+            /* 교차에(세로col) 대한 정렬 */
+            align-items: center;
+            position: fixed;
+            background-color: rgb(231, 186, 194);
+            inset: 0;
+        }
+        .modal-box{
+            position: relative;
+            background-color: rgb(236, 147, 177);
+            width: 400px;
+            padding: 20px;
+
+            border-radius: 20px;
+        }
+        .modal-box input{
+            width: 100%;
+        }
+        .modal-close{
+            position: absolute;
+            right: 20px;
+            top: 20px;
+
+            border: 1px solid rgba(97, 64, 2, 0.788);
+            background-color: var(--white);
+            font-size: 2rem;
+            color: gray;
+
+        }
+        .show{
+
+        }
+        /* 세로 마진이 중첩되는 경우, 큰 쪽으로 표현된다 */
+        .modal-box h6, .modal-box h3{
+            margin: 0px;
+        }
+        /* .btn{
+            width: 100%;
+        } */
+        .w-100{
+            width: 100%;
+        }
+        .bc-blue{
+            background-color: pink;
+        }
+        .border-none{
+            border: none;
+        }
+        .h-30px{
+            height: 30px;
+        }
+        .fs-large{
+            font-size: 1rem;
+        }
+        .border-radius{
+            border-radius: 20px;
+
+        }
+        #modalTitle{
+            font-family: "Gowun Batang", serif;
+            font-weight: 800;
+            font-style: normal;
+            font-style: bold;
+        }
+        #modalcontent{
+            font-family: "Gowun Batang", serif;
+            font-weight: 500;
+            font-style: bold;
+            margin-bottom: 12px;
+            margin-top: 5px;
+        }
+        #content1{
+            font-family: "Gowun Batang", serif;
+            font-weight: 800;
+            font-style: normal;
+            font-size: 0.8rem;
+        }
+        
+        #content2{
+            font-family: "Gowun Batang", serif;
+            font-weight: 800;
+            font-style: normal;
+            font-size: 0.8rem;
+        }
+        .modal-box input{
+            margin: 10px 0px;
+            height: 20px;
+            font-size: 1.2rem;
+            padding-left: 5px;
+            border: 1px solid #ccc;
+        }
+        /* button{
+        cursor: pointer;
+        background: none;
+        border: none;} */
+
+    </style>
+</head>
+<body>
+    <!-- 모달을 여는 버튼 -->
+<button id="loginTrigger">로그인</button>
+
+<!-- 평소엔 숨겨져 있는 백드롭 + 모달 -->
+<!-- class속성을 여러개 적용 할 경우, 띄어쓰기를 이용해서 연결 -->
+<div class="modal-backdrop show" id="modalBackdrop">
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <button class="modal-close" id="modalClose" aria-label="닫기">&times;</button>
+        <h3 id="modalTitle">로그인</h3>
+        <h6 id="modalcontent" class="mb-20" >이메일과 비밀번호를 입력하세요.</h6>
+        <form id="loginForm">
+        <!-- 인라인 속성을 가지고 있는 요소는 마진/패딩 값을 가질 수 없다 -->
+        <label for="email" id="content1">이메일</label>
+        <input type="email" id="email" required>
+
+        <label for="password" id="content2">비밀번호</label>
+        <input type="password" id="password" required>
+
+        <button type="submit" class="btn w-100 border-none bc-blue h-30px fs-large border-radius">로그인</button>
+        </form>
+    </div>
+</div> 
+
+
+</body>
+</html>

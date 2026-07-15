@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>무비 컬렉션 — CSS 선택자 연습</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="/html/실습.css/basic.css">
+  <link rel="stylesheet" href="/css/component.css">
+  <!-- <link rel="stylesheet" href="answer_key.css"> -->
+</head>
+<style>
+  tr:nth-child(2n){
+    background-color: var(--navy);
+  }
+  tr:nth-child(2n) td{
+    color: white;
+  }
+
+  td:first-child{
+    color: peru;
+    padding-left: 20px;
+  }
+
+</style>
+<body class="bg-light">
+
+  <header id="site-header" class="d-flex justify-between h-50px items-center mb-7 text-white bg-dark pb-50">
+    <div class="logo fw-bold fs-lg">🎬 무비 컬렉션</div>
+    <nav>
+      <!-- .burger가 클릭되면 openㅌ클래스를 넣다가 뺐다가 한다 
+      open클래스 : nav-menu를 보여줌 
+      -->
+      <div class="burger ">☰</div>
+      <ul class="nav-menu open">
+        <li><a href="#">홈</a></li>
+        <li class="has-submenu">
+          <a href="#">장르</a>
+          <ul class="submenu">
+            <li><a href="#">액션</a></li>
+            <li><a href="#">로맨스</a></li>
+            <li><a href="#">SF</a></li>
+          </ul>
+        </li>
+        <li><a href="#">랭킹</a></li>
+        <li><a href="#" class="btn-signup bg-primary p-3 rounded-full fw-bold ">회원가입</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="d-flex flex-col items-center bg-white pb-5">
+    <h1 class="pb-2 pt-5">이번 주, 어떤 영화 볼까요?</h1>
+    <p class="text-gray fw-medium pb-5">큐레이션된 컬렉션에서 다음 영화를 찾아보세요.</p>
+    <form class="search-form">
+      <input class="border-left-2" type="text"  name="keyword" placeholder="영화 제목 검색" required>
+      <select class="bu" name="genre">
+        <option value="all">전체 장르</option>
+        <option value="action">액션</option>
+        <option value="romance">로맨스</option>
+        <option value="scifi">SF</option>
+      </select>
+      <button type="submit">검색</button>
+    </form>
+  </section>
+
+  <section class="movie-list max-w-lg  mt-7 m-auto">
+    <h2 class="border-left-2 my-2 pl-4">이번 달 추천작</h2>
+    <div class="d-flex flex-wrap gap-5 ml-4">
+
+      <article class="card flex-2 rounded-lg overflow-hidden " data-rating="9.2">
+        <img class="w-100 h-300px object-cover" src="https://picsum.photos/seed/movie1/300/400" alt="스텔라 오디세이 포스터">
+        <div class="card-body bg-white px-3 py-5">
+          <h3>스텔라 오디세이</h3>
+          <p class="genre text-gray mb-2">SF · 액션</p>
+          <span class="badge">NEW</span>
+        </div>
+      </article>
+
+      <article class="card rounded-lg overflow-hidden flex-2  featured" data-rating="9.8">
+        <img class="w-100 h-300px object-cover" src="https://picsum.photos/seed/movie2/300/400" alt="도시의 밤 포스터">
+       <div class="card-body bg-white px-3 py-5">
+          <h3>도시의 밤 포스터</h3>
+          <p class="genre text-gray mb-2">SF · 액션</p>
+          <span class="badge">NEW</span>
+        </div>
+      </article>
+
+      <article class="card rounded-lg overflow-hidden flex-2" data-rating="8.7">
+        <img class="w-100 h-300px object-cover" src="https://picsum.photos/seed/movie3/300/400" alt="여름의 문 포스터">
+        <div class="card-body bg-white px-3 py-5 ">
+          <h3>여름의 문 포스터</h3>
+          <p class="genre text-gray mb-2">SF · 액션</p>
+          <span class="badge">NEW</span>
+        </div>
+      </article>
+
+      <article class="card rounded-lg overflow-hidden flex-2" data-rating="9.0">
+        <img class="w-100 h-300px object-cover" src="https://picsum.photos/seed/movie4/300/400" alt="마지막 항해 포스터">
+        <div class="card-body bg-white px-3 py-5">
+          <h3>마지막 항해 포스터</h3>
+          <p class="genre text-gray mb-2">SF · 액션</p>
+          <span class="badge">NEW</span>
+        </div>
+      </article>
+
+      <article class="card  rounded-lg overflow-hidden flex-2" data-rating="8.4">
+        <img class="w-100 h-300px object-cover" src="https://picsum.photos/seed/movie5/300/400" alt="붉은 골목 포스터">
+        <div class="card-body bg-white px-3 py-5">
+          <h3>붉은 골목 포스터</h3>
+          <p class="genre text-gray mb-2">SF · 액션</p>
+          <span class="badge">NEW</span>
+        </div>
+      </article>
+
+      <article class="card rounded-lg overflow-hidden flex-2" data-rating="9.5">
+        <img class="w-100 h-300px object-cover" src="https://picsum.photos/seed/movie6/300/400" alt="파랑의 계절 포스터">
+        <div class="card-body bg-white px-3 py-5">
+          <h3>스텔라 오디세이</h3>
+          <p class="genre text-gray mb-2">SF · 액션</p>
+          <span class="badge">NEW</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="max-w-lg m-auto">
+    <h2 class="title">실시간 랭킹</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>순위</th>
+          <th>제목</th>
+          <th>평점</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>도시의 밤</td><td>9.8</td></tr>
+        <tr><td>2</td><td>파랑의 계절</td><td>9.5</td></tr>
+        <tr><td>3</td><td>스텔라 오디세이</td><td>9.2</td></tr>
+        <tr><td>4</td><td>마지막 항해</td><td>9.0</td></tr>
+        <tr><td>5</td><td>여름의 문</td><td>8.7</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <footer id="site-footer">
+    <div class="footer-links">
+      <ul>
+        <li><a href="#">이용약관</a></li>
+        <li><a href="#">개인정보처리방침</a></li>
+        <li><a href="#">문의하기</a></li>
+      </ul>
+    </div>
+    <p class="copyright">&copy; 2026 무비 컬렉션. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // 1.화면에 있는 요소 선택
+    // 2.요소에 이벤트를 적용
+    3.
+    const burger = document.querySelector('.burger');
+    const menu = document.querySelector('.nav-menu');
+    // 요소에 open 클래스를 넣다가 뺐다가 합니
+    // 1. 버거 클릭 → 메뉴 슬라이드 토글
+    burger.addEventListener('click', () => {
+      // toggle : 없으면 넣고 있으면 빼줌
+      menu.classList.toggle('open');
+    });
+
+    // 2. "장르" 클릭 → 서브메뉴 아코디언 토글 (모바일에서만 의미 있음)
+    document.querySelectorAll('.has-submenu > a').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();  // # 링크 이동 방지
+        link.parentElement.classList.toggle('open');
+      });
+    });
+
+    
+  </script> 
+
+</body>
+</html>
