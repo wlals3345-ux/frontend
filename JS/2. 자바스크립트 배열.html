@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>배열</h1>
+    <script>
+        // 배열 : 선언 여러개의 데이터를 하나의 변수에 저장
+        // 선언하는 방법 : []를 이용해서 여러개의 값을 나열
+        const titles = ["도시의 밤", "파랑의 계절", "스텔라 오디세이"];
+        console.log(titles);
+        //반복문 안에 있는 데이터의 값을 출력하기 위해서 반복문 이동
+        for(let i = 0; i<= titles.length-1; i++ ){
+            // 배열의 방의 데이터 읽어오기
+            console.log(titles[i])
+        }
+
+
+        // 배열의 방의 값을 변경하기
+        titles[2] = "타짜";
+        // 변경된 값 확인
+        console.log(titles);
+
+        // 없는 방번호를 입력하면 = undefined
+        console.log(titles[4]);
+
+
+
+        // nwe array()를 이용해서 배열을 만드는 방법
+        const arr1 = new Array(1,2,3);
+        console.log(arr1);
+        
+
+
+
+
+        console.log("배열 복습")
+
+        let name = ["지민1", "지민2", "지민3"];
+        console.log([name.length-1]);
+        console.log(name[2]);
+
+
+
+        let meat = ["돼지", "소", "양"];
+        console.log([meat]);
+
+
+        const tittle = ["곡성","토이스토리","인셉션"];
+        console.log(tittle);
+        console.log(tittle[0]);
+        console.log(tittle[2]);
+        console.log(tittle[tittle.length-1]);
+
+
+        const original = ["곡성", "사바하", "반도"];
+    
+        original.push("부산행");
+        console.log(original);
+
+        original.pop("");
+        console.log(original);
+
+        original.pop("");
+        console.log(original);
+
+        let movie = ["도시의 밤","파랑의 계절", "여름의 문"];
+        console.log(movie);
+        console.log(movie[movie.length-3]);
+        console.log(movie[movie.length-1]);
+        movie.push("스텔라 오디세이");
+        console.log(movie);
+        movie.shift();
+        console.log(movie);
+
+        let remove = movie.shift();
+        console.log(remove);
+        console.log(movie);
+
+        console.log(movie.length);
+
+
+        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>함수</h2>
+    <script>
+        /*
+        매개변수 : 외부에서 함수를 호출할 때 넣어주는 값 (필수아님)
+        반환 : 호출한 곳으로 값을 되돌려 보냄 (필수아님)
+
+
+        함수 작성 방법
+            function 함수이름 (매개변수1, 매개변수2, ...){
+            return 반환할 값(리턴할 값);
+        }
+
+        함수 실행 방법
+            함수명():
+            함수명(값, 값);
+        */
+        function print(){
+            console.log('print');
+        }
+        // 매개변수는 있고 반환(return)이 없는 함수
+        // 함수의 실행 결과 undefined가 반환됨
+        function print(msg){
+            console.log(msg);
+        }
+        // 두 개의 수를 입력받아서 두 수의 합을 반환하는 함수
+        function add(i,j){
+           return i + j;
+        }
+
+
+        // 함수의 실행결과 반환값을 재사용하기 위해서 변수에 저장했다가 다시 사용
+        add(1,2); // 호출만 하는 것은 의미가 없음 - 반환값이 있고 반환값을 재사용해야 한다면 변수에 저장한다
+        let res = add(1,2);
+        console.log(res);
+        
+        
+        // 함수 작성 방법 - 2. 익명의 함수
+        // 함수를 변수에 저장하거나 
+        // 함수를 매개변수로 전달 !!!! --> 콜백함수
+        
+        // function(name){
+        //     console.log(`${name}반가워요!`);
+
+        //  익명의 함수를 변수에 저장
+        //  let greet = function( ){
+        //      console.log(`${"name"}반가워요!`);
+
+        //     }
+        // 변수에 저장된 익명의 함수를 실행하는 방법
+        // 변수의 이름을 불러줌()
+        // greet("미션");
+        
+        // 2개의 수를 입력 받아서 두수의 합을 반환하는 함수
+        // 타입을 확인해서 숫자가 아니라면 '숫자를 입력해주세요'
+        // 함수명 add2 
+
+    
+       
+        function add2(num1, num2){
+            if(typeof(num1) != 'number'
+                || typeof(num2) != 'number'){
+                
+                    return 'oo';
+            }
+            
+            return '숫자를 입력해주세요';
+            
+            //    return num1+num2;
+        }
+        
+
+
+        //선언적 함수
+        function welcome1 (){
+            console.log("ㅋㅇㅋ");
+            // 회면에 있는 요소를 선택
+            let box = document.querySelector(".box");
+            // 요소의 컨텐츠를 변경
+            
+            box.innerHTML="하 ㅜㅜ";
+        }
+        // 익명의 함수 (변수에 저장하거나, 매개변수로 전달(콜백함수 ㅈㄴ중요))
+        let welcome2 = function() {
+            console.log("ㅇㅋㅇㅋ");
+        }
+
+        let welcome3 = () => {
+            console.log("ㅇㅋㅇㅋㅇㅋ");
+        }
+        
+        // 박스를 선택
+        // 박스.innerText = 값
+
+
+
+
+        // console.log(함수 3형태로 같은 기능 만들기);
+
+        function 환영1(){
+            console.log("무비 컬렉션에 오신 것을 환영합니다");
+
+        }
+    
+      
+        let 이름없듬 = function (){
+            console.log("이름 없");
+        };
+
+    function 웅 (){
+        console.log("집가고시퍼");
+    }
+    function 실행(callback){
+        callback();
+    }
+    실행(웅);
+
+
+    function 이름 (){
+        console.log("박지민입니다");
+    }
+    const 나이 = function  (){
+        console.log("27살 박지민입니다");
+    } 
+
+
+    let color = ["red", "blue", "black"];
+    console.log(color[color.length]);
+    </script>
+
+
+<div class="box"></div>
+</body>
+</html>
