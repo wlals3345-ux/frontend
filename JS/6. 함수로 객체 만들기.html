@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //객체
+    let movie = {
+        title : '영화'
+        , rating : 9.2
+    }
+
+        // 배열 - 여러개를 담을 수 있다!
+    let movies = [
+        {title : '영화1', rating : 9.2}
+        ,{title : '영화2', rating : 6.2}
+        ,{title : '영화3', rating : 3.2}
+    ]
+
+
+        // 함수를 이용해서 객체를 만들기
+        // 1. 팩토리 방식 : 함수 내부에서 객체를 만들어서 반환
+        function createMovie(title, rating){
+            let movie = {
+                title : title
+                , rating : rating
+
+            }
+            return movie;
+        }
+        let movies_arr = [createMovie('영화1', 9.2)
+                                , createMovie('영화3', 3.2)
+                                , createMovie('영화2', 6.2)]
+
+        
+        // 배열에 요소를 추가하기    
+        movie = createMovie('영화4', 3.3)                    
+        movies_arr.push(movie)
+        // -----------------------------------------------
+        movies_arr.push(createMovie('영화4', 3.3))
+            
+
+        console.log('movies_arr', movies_arr)                        
+        console.log(createMovie('영화4',3.3))
+
+        // 2. 생성자 함수를 이용
+        // this키워드를 이용해서 속성을 만듦 -> new 키워드를 이용해서 객체를 생성
+        // 값을 외부에서 가져온다 = 초기화(매개변수로 값을 받아서 객체를 초기화)
+        function Movie(title, rating){
+            // new키워드가 사용되었는지 확인
+            console.log('new.target',new.target)
+            // 거짓일 때 실행되게 하려면 앞에 '!' 를 붙임 값을 전환 시키는 
+            if(new.target) 
+                throw new Error('new 키워드가 없습니다. 객체 생성 ㄴㄴ')
+            this.title = title
+            this.rating = rating
+            
+
+        }
+    </script>
+</body>
+</html>
